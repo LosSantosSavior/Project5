@@ -15,8 +15,8 @@ public class FirstWindowController {
 
 
     @FXML
-    public void handleOpenWindow(ActionEvent event){
-        var secondLoc = new FXMLLoader(FirstWindowApplication.class.getResource("SecondWindow.fxml"));
+    public void handleOpenChuckNorris(ActionEvent event){
+        var secondLoc = new FXMLLoader(FirstWindowApplication.class.getResource("ChuckNorrisWindow.fxml"));
         Scene secondScene = null;
         try{
             secondScene = new Scene(secondLoc.load(), 900, 600);
