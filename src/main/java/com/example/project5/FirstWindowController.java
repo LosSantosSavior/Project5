@@ -1,29 +1,38 @@
 package com.example.project5;
 
-import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class FirstWindowController extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(twoWindowDemo.class.getResource("FirstWindow.fxml"));
-        Scene scene = null;
-        try {
-            scene = new Scene(fxmlLoader.load(), 300, 400);
+public class FirstWindowController {
+    @FXML
+    private Label welcomeText;
+
+
+    @FXML
+    public void handleOpenWindow(ActionEvent event){
+        var secondLoc = new FXMLLoader(FirstWindowApplication.class.getResource("SecondWindow.fxml"));
+        Scene secondScene = null;
+        try{
+            secondScene = new Scene(secondLoc.load(), 900, 600);
+        }catch (IOException e){
+            System.out.println("Couldn't load second window");
+            e.printStackTrace();
         }
-        catch (IOException e){
-            System.out.println("Couldn't Find FXML file!!!!!!");
-        }
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+        Stage secondWindow = new Stage();
+        secondWindow.setScene(secondScene);
+        secondWindow.setTitle("See  - here is a second window");
+        secondWindow.show();
     }
 
-    public static void main(String[] args) {
-        launch();
+    @FXML
+    public void handleClose(ActionEvent event){
+        System.exit(0);
     }
+
 }
