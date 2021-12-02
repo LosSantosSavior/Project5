@@ -9,11 +9,11 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 
-public class DataHandler {
+public class ChuckNorrisDataHandler {
     private HttpClient dataGrabber;
     private String webLocation;
 
-    public DataHandler(String siteToSearch){
+    public ChuckNorrisDataHandler(String siteToSearch){
         dataGrabber = HttpClient.newHttpClient();
         webLocation = siteToSearch;
     }
@@ -36,20 +36,20 @@ public class DataHandler {
         }
         var responseBody = response.body();
         var jsonParser = new Gson();
-        var UniData = jsonParser.fromJson(responseBody, ChuckNorrisDataType[].class);
-        return UniData;
+        var ChuckData = jsonParser.fromJson(responseBody, ChuckNorrisDataType[].class);
+        return ChuckData;
     }
 
     class ChuckNorrisDataType{
         String alpha_two_code;
-        ArrayList<String>web_pages;
-        String name;
-        String country;
+        ArrayList<String>url;
+        String value;
+        String categories;
         ArrayList<String>domains;
 
         @Override
         public String toString(){
-            return name;
+            return value;
         }
     }
 }

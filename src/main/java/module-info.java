@@ -7,6 +7,7 @@ module com.example.project5 {
     requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
     requires java.net.http;
+    requires com.google.gson;
 
     opens com.example.project5 to javafx.fxml;
     exports com.example.project5;
