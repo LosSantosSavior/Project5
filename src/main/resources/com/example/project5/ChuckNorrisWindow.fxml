@@ -30,12 +30,7 @@
                   <HBox prefHeight="100.0" prefWidth="200.0" />
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="96.0" prefWidth="302.0" text="New Joke">
-                           <font>
-                              <Font size="36.0" />
-                           </font>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="96.0" prefWidth="298.0" text="New Joke Type">
+                        <Button mnemonicParsing="false" prefHeight="96.0" prefWidth="592.0" text="New Joke">
                            <font>
                               <Font size="36.0" />
                            </font>

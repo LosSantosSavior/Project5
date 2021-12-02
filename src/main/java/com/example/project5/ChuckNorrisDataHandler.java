@@ -18,7 +18,7 @@ public class ChuckNorrisDataHandler {
         webLocation = siteToSearch;
     }
 
-    public ChuckNorrisDataType[] getData(){
+    public ChuckNorrisDataType getData(){
         var requestBuilder = HttpRequest.newBuilder();
         var ourURI = URI.create(webLocation);
         var dataRequest = requestBuilder.uri(ourURI).build();
@@ -36,16 +36,18 @@ public class ChuckNorrisDataHandler {
         }
         var responseBody = response.body();
         var jsonParser = new Gson();
-        var ChuckData = jsonParser.fromJson(responseBody, ChuckNorrisDataType[].class);
+        var ChuckData = jsonParser.fromJson(responseBody, ChuckNorrisDataType.class);
         return ChuckData;
     }
 
     class ChuckNorrisDataType{
-        String alpha_two_code;
-        ArrayList<String>url;
+        ArrayList<String>categories;
+        String created_at;
+        String icon_url;
+        String id;
+        String updated_at;
+        String url;
         String value;
-        String categories;
-        ArrayList<String>domains;
 
         @Override
         public String toString(){
