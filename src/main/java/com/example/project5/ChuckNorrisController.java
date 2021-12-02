@@ -2,6 +2,8 @@ package com.example.project5;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -17,13 +19,14 @@ import java.util.ResourceBundle;
 
 public class ChuckNorrisController implements Initializable {
     @FXML
-    private ListView<String> CatList;//turn into arraylist
+    private ListView<String[]> CatList;//turn into arraylist
     @FXML
     private TextField JokeDisplay;
     @FXML
     private TextField CatDisplay;
     private ChuckNorrisDataHandler Model;
     private ArrayList<String[]> Categories;
+    private ObservableList<String[]>OList;
 
     public void loadData(){
         var site = "https://api.chucknorris.io/jokes/categories=";
@@ -48,6 +51,9 @@ public class ChuckNorrisController implements Initializable {
             var lineSplit = line.split(",");
             Categories.add(lineSplit);
         }
+        //Categories=new ArrayList<>(OList);
+        OList= FXCollections.observableArrayList(Categories);
+        CatList.setItems(OList);
 
 
 
@@ -58,10 +64,10 @@ public class ChuckNorrisController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         LoadList();
         CatList.getSelectionModel().selectedItemProperty().addListener
-                (new ChangeListener<String>() {
+                (new ChangeListener<String[]>() {
                     @Override
-                    public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                        CatDisplay.setText(t1);
+                    public void changed(ObservableValue<? extends String[]> observableValue, String[] strings, String[] t1) {
+                        CatDisplay.setText(String.valueOf(t1));
                     }
                 });
     }
