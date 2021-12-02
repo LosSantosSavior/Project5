@@ -36,7 +36,7 @@ public class ChuckNorrisController implements Initializable {
     }
     public void LoadList(){
         Categories = new ArrayList<String[]>();
-        var filename = "ChuckNorrisCategories";
+        var filename = "ChuckNorrisCategory";
         var filePath = Paths.get(filename);
         List<String> allLines = null;
         try {
@@ -56,11 +56,7 @@ public class ChuckNorrisController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            LoadList();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        LoadList();
         CatList.getSelectionModel().selectedItemProperty().addListener
                 (new ChangeListener<String>() {
                     @Override
