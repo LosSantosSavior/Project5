@@ -34,7 +34,7 @@ public class ChuckNorrisController implements Initializable {
         var wholeSite = site+param;
         Model = new ChuckNorrisDataHandler(wholeSite);
         var Norris = Model.getData();
-       //single joke instead
+
 
     }
     public void LoadList(){
@@ -54,10 +54,9 @@ public class ChuckNorrisController implements Initializable {
         //Categories=new ArrayList<>(OList);
         OList= FXCollections.observableArrayList(Categories);
         CatList.setItems(OList);
-
-
-
-
+    }
+    public void NewJokePushed(){
+        loadData();
     }
 
     @Override
@@ -67,7 +66,7 @@ public class ChuckNorrisController implements Initializable {
                 (new ChangeListener<String[]>() {
                     @Override
                     public void changed(ObservableValue<? extends String[]> observableValue, String[] strings, String[] t1) {
-                        CatDisplay.setText(String.valueOf(t1));
+                        CatDisplay.setText(String.valueOf(t1.toString()));
                     }
                 });
     }
