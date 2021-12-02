@@ -26,7 +26,7 @@ public class FirstWindowController {
         }
         Stage secondWindow = new Stage();
         secondWindow.setScene(secondScene);
-        secondWindow.setTitle("See  - here is a second window");
+        secondWindow.setTitle("Chuck Norris API");
         secondWindow.show();
     }
 
