@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -28,7 +29,10 @@
          </font>
       </Label>
       <TextField layoutX="457.0" layoutY="83.0" prefHeight="25.0" prefWidth="149.0" />
-      <ChoiceBox layoutY="-2.0" prefHeight="29.0" prefWidth="62.0" />
+      <ChoiceBox layoutY="27.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></ChoiceBox>
       <Label layoutX="51.0" layoutY="163.0" prefHeight="17.0" prefWidth="41.0" text="Year:">
          <font>
             <Font name="Agency FB Bold" size="21.0" />
@@ -75,5 +79,15 @@
       </Label>
       <TextField layoutX="457.0" layoutY="163.0" prefHeight="25.0" prefWidth="149.0" />
       <TextField layoutX="457.0" layoutY="236.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="9.0" layoutY="3.0" text="Year:">
+         <font>
+            <Font name="Agency FB Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="18.0" prefHeight="43.0" prefWidth="274.0" text="GDP Comparison" textFill="#047215">
+         <font>
+            <Font name="Droid Sans" size="35.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
