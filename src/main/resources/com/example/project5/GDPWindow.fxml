@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.project5.GDPController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project5.GDPController">
+   <children>
+      <Label layoutX="11.0" layoutY="82.0" prefHeight="25.0" prefWidth="41.0" text="Year:">
+         <font>
+            <Font name="Agency FB Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="82.0" text="Country:">
+         <font>
+            <Font name="Agency FB Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="363.0" layoutY="82.0" text="GDP Value:">
+         <font>
+            <Font name="Agency FB Bold" size="21.0" />
+         </font></Label>
+      <TextField layoutX="50.0" layoutY="83.0" prefHeight="25.0" prefWidth="76.0" />
+      <TextField layoutX="223.0" layoutY="83.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="446.0" layoutY="81.0" text="\$">
+         <font>
+            <Font name="Agency FB Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="457.0" layoutY="83.0" prefHeight="25.0" prefWidth="149.0" />
+      <ChoiceBox layoutY="2.0" prefHeight="25.0" prefWidth="77.0" />
+   </children>
 </AnchorPane>
