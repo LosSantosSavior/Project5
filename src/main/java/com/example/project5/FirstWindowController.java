@@ -31,6 +31,22 @@ public class FirstWindowController {
     }
 
     @FXML
+    public void handleOpenGDP(ActionEvent event)    {
+        var thirdLoc = new FXMLLoader(FirstWindowApplication.class.getResource("GDPWindow.fxml"));
+        Scene thirdScene = null;
+        try {
+            thirdScene = new Scene(thirdLoc.load(), 400, 600);
+        } catch (IOException e) {
+            System.out.println("Couldn't load third window...");
+            e.printStackTrace();
+        }
+        Stage thirdWindow = new Stage();
+        thirdWindow.setScene(thirdScene);
+        thirdWindow.setTitle("GDP API");
+        thirdWindow.show();
+    }
+
+    @FXML
     public void handleClose(ActionEvent event){
         System.exit(0);
     }
