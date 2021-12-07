@@ -35,7 +35,7 @@ public class FirstWindowController {
         var thirdLoc = new FXMLLoader(FirstWindowApplication.class.getResource("GDPWindow.fxml"));
         Scene thirdScene = null;
         try {
-            thirdScene = new Scene(thirdLoc.load(), 400, 600);
+            thirdScene = new Scene(thirdLoc.load(), 650, 600);
         } catch (IOException e) {
             System.out.println("Couldn't load third window...");
             e.printStackTrace();
