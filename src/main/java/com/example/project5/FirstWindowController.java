@@ -47,6 +47,22 @@ public class FirstWindowController {
     }
 
     @FXML
+    public void handleOpenPhoneNum(ActionEvent event){
+        var fourthLoc = new FXMLLoader(FirstWindowApplication.class.getResource("PhoneNumWindow.fxml"));
+        Scene fourthScene = null;
+        try {
+            fourthScene = new Scene(fourthLoc.load(), 800, 600);
+        } catch (IOException e){
+            System.out.println("Couldn't load a fourth window ...");
+            e.printStackTrace();
+        }
+        Stage fourthWindow = new Stage();
+        fourthWindow.setScene(fourthScene);
+        fourthWindow.setTitle("International Phone Numbers API");
+        fourthWindow.show();
+    }
+
+    @FXML
     public void handleClose(ActionEvent event){
         System.exit(0);
     }
