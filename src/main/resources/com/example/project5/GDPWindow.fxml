@@ -84,7 +84,7 @@
             <Font name="Agency FB Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="18.0" prefHeight="43.0" prefWidth="274.0" text="GDP Comparison" textFill="#047215">
+      <Label layoutX="175.0" layoutY="18.0" prefHeight="43.0" prefWidth="274.0" text="GDP Comparison" textFill="#047215">
          <font>
             <Font name="Droid Sans" size="35.0" />
          </font>
