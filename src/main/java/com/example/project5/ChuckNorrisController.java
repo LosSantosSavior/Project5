@@ -51,7 +51,6 @@ public class ChuckNorrisController implements Initializable {
         for (var line : allLines.split(",")) {
             Categories.add(line);
         }
-        //Categories=new ArrayList<>(OList);
         OList= FXCollections.observableArrayList(Categories);
         CatList.setItems(OList);
     }

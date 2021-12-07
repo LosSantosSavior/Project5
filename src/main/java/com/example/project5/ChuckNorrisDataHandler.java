@@ -35,8 +35,8 @@ public class ChuckNorrisDataHandler {
             System.exit(-1);
         }
         var responseBody = response.body();
-        var jsonParser = new Gson();
         System.out.println(responseBody);
+        var jsonParser = new Gson();
         var ChuckData = jsonParser.fromJson(responseBody, ChuckNorrisDataType.class);
         return ChuckData;
     }
