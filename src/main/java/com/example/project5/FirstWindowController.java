@@ -19,7 +19,7 @@ public class FirstWindowController {
         var secondLoc = new FXMLLoader(FirstWindowApplication.class.getResource("ChuckNorrisWindow.fxml"));
         Scene secondScene = null;
         try{
-            secondScene = new Scene(secondLoc.load(), 900, 600);
+            secondScene = new Scene(secondLoc.load(), 1000, 600);
         }catch (IOException e){
             System.out.println("Couldn't load second window");
             e.printStackTrace();
@@ -35,7 +35,7 @@ public class FirstWindowController {
         var thirdLoc = new FXMLLoader(FirstWindowApplication.class.getResource("GDPWindow.fxml"));
         Scene thirdScene = null;
         try {
-            thirdScene = new Scene(thirdLoc.load(), 400, 600);
+            thirdScene = new Scene(thirdLoc.load(), 650, 600);
         } catch (IOException e) {
             System.out.println("Couldn't load third window...");
             e.printStackTrace();
@@ -44,6 +44,22 @@ public class FirstWindowController {
         thirdWindow.setScene(thirdScene);
         thirdWindow.setTitle("GDP API");
         thirdWindow.show();
+    }
+
+    @FXML
+    public void handleOpenPhoneNum(ActionEvent event){
+        var fourthLoc = new FXMLLoader(FirstWindowApplication.class.getResource("PhoneNumWindow.fxml"));
+        Scene fourthScene = null;
+        try {
+            fourthScene = new Scene(fourthLoc.load(), 800, 600);
+        } catch (IOException e){
+            System.out.println("Couldn't load a fourth window ...");
+            e.printStackTrace();
+        }
+        Stage fourthWindow = new Stage();
+        fourthWindow.setScene(fourthScene);
+        fourthWindow.setTitle("International Phone Numbers API");
+        fourthWindow.show();
     }
 
     @FXML

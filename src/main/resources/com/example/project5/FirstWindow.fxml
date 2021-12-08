@@ -8,8 +8,8 @@
       <VBox layoutX="0" layoutY="0" prefHeight="400.0" prefWidth="292.0">
          <children>
             <Button mnemonicParsing="false" onAction="#handleOpenChuckNorris" prefHeight="96.0" prefWidth="292.0" text="Open Chuck Norris API" />
-            <Button mnemonicParsing="false" prefHeight="103.0" prefWidth="292.0" text="Open GDP API" />
-            <Button mnemonicParsing="false" prefHeight="106.0" prefWidth="293.0" text="Window3(needs code)" />
+            <Button mnemonicParsing="false" onAction="#handleOpenGDP" prefHeight="103.0" prefWidth="292.0" text="Open GDP API" />
+            <Button mnemonicParsing="false" onAction="#handleOpenPhoneNum" prefHeight="106.0" prefWidth="293.0" text="Open International Phone Numbers" />
             <Button mnemonicParsing="false" onAction="#handleClose" prefHeight="98.0" prefWidth="292.0" text="Exit" />
          </children></VBox>
    </children>

@@ -19,53 +19,56 @@ import java.util.ResourceBundle;
 
 public class ChuckNorrisController implements Initializable {
     @FXML
-    private ListView<String[]> CatList;//turn into arraylist
+    private ListView<String> CatList;//turn into arraylist
     @FXML
     private TextField JokeDisplay;
     @FXML
     private TextField CatDisplay;
+    @FXML
+    private TextField URLDisplay;
     private ChuckNorrisDataHandler Model;
-    private ArrayList<String[]> Categories;
-    private ObservableList<String[]>OList;
+    private ArrayList<String> Categories;
+    private ObservableList<String>OList;
+    private ChuckNorrisDataHandler.ChuckNorrisDataType Norris;
 
     public void loadData(){
-        var site = "https://api.chucknorris.io/jokes/categories=";
+        var site = "https://api.chucknorris.io/jokes/random?category=";
         var param = CatDisplay.getText();
         var wholeSite = site+param;
         Model = new ChuckNorrisDataHandler(wholeSite);
-        var Norris = Model.getData();
+         Norris = Model.getData();
 
 
     }
     public void LoadList(){
-        Categories = new ArrayList<String[]>();
+        Categories = new ArrayList<String>();
         var filename = "ChuckNorrisCategory";
         var filePath = Paths.get(filename);
-        List<String> allLines = null;
+        String allLines = null;
         try {
-            allLines = Files.readAllLines(filePath);
+            allLines = Files.readString(filePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (var line : allLines) {
-            var lineSplit = line.split(",");
-            Categories.add(lineSplit);
+        for (var line : allLines.split(",")) {
+            Categories.add(line);
         }
-        //Categories=new ArrayList<>(OList);
         OList= FXCollections.observableArrayList(Categories);
         CatList.setItems(OList);
     }
     public void NewJokePushed(){
         loadData();
+        JokeDisplay.setText(Norris.value);
+        URLDisplay.setText(Norris.url);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         LoadList();
         CatList.getSelectionModel().selectedItemProperty().addListener
-                (new ChangeListener<String[]>() {
+                (new ChangeListener<String>() {
                     @Override
-                    public void changed(ObservableValue<? extends String[]> observableValue, String[] strings, String[] t1) {
+                    public void changed(ObservableValue<? extends String> observableValue, String strings, String t1) {
                         CatDisplay.setText(String.valueOf(t1.toString()));
                     }
                 });

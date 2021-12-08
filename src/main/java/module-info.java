@@ -9,6 +9,6 @@ module com.example.project5 {
     requires java.net.http;
     requires com.google.gson;
 
-    opens com.example.project5 to javafx.fxml;
+    opens com.example.project5 to javafx.fxml,com.google.gson;
     exports com.example.project5;
 }
