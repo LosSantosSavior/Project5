@@ -6,12 +6,12 @@
 
 <AnchorPane prefHeight="498.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project5.ChuckNorrisController">
    <children>
-      <HBox layoutY="-2.0" prefHeight="498.0" prefWidth="790.0">
+      <HBox layoutY="-2.0" prefHeight="498.0" prefWidth="906.0">
          <children>
-            <ListView fx:id="CatList" prefHeight="372.0" prefWidth="200.0" />
-            <VBox prefHeight="498.0" prefWidth="594.0">
+            <ListView fx:id="CatList" prefHeight="397.0" prefWidth="198.0" />
+            <VBox prefHeight="498.0" prefWidth="843.0">
                <children>
-                  <TextField fx:id="JokeDisplay" editable="false" prefHeight="122.0" prefWidth="401.0" />
+                  <TextField fx:id="JokeDisplay" editable="false" prefHeight="117.0" prefWidth="633.0" />
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="95.0" prefWidth="115.0" text="Joke Type:">
@@ -26,7 +26,16 @@
                         </TextField>
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="135.0" prefWidth="116.0" text="URL:">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="URLDisplay" editable="false" prefHeight="108.0" prefWidth="412.0" />
+                     </children>
+                  </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" />
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>

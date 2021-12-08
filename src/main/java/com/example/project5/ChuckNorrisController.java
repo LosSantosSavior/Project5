@@ -24,6 +24,8 @@ public class ChuckNorrisController implements Initializable {
     private TextField JokeDisplay;
     @FXML
     private TextField CatDisplay;
+    @FXML
+    private TextField URLDisplay;
     private ChuckNorrisDataHandler Model;
     private ArrayList<String> Categories;
     private ObservableList<String>OList;
@@ -57,6 +59,7 @@ public class ChuckNorrisController implements Initializable {
     public void NewJokePushed(){
         loadData();
         JokeDisplay.setText(Norris.value);
+        URLDisplay.setText(Norris.url);
     }
 
     @Override
