@@ -17,7 +17,7 @@
             <Font name="Agency FB Bold" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="369.0" layoutY="83.0" text="GDP Value:">
+      <Label layoutX="369.0" layoutY="83.0" prefHeight="28.0" prefWidth="77.0" text="GDP Value:">
          <font>
             <Font name="Agency FB Bold" size="21.0" />
          </font></Label>
