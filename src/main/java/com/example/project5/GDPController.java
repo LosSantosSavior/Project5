@@ -28,6 +28,8 @@ public class GDPController implements Initializable {
     @FXML
     private ChoiceBox yearChoice;
     private ArrayList<String> years;
+    private GDPDataHandler GDPModel;
+    private GDPDataHandler.GDPDataType GDP;
 
 
 

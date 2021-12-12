@@ -27,6 +27,8 @@ public class GDPDataHandler {
         webLoc = siteToSearch;
     }
 
+    class GDPDataType   {
 
+    }
 
 }
