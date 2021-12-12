@@ -38,6 +38,7 @@ public class PhoneNumController implements Initializable {
         CountryList.setItems(List);
     }
 
+
     private String getQueryParam(){ // window asking for input
         var inputDialog = new TextInputDialog("United States");
         inputDialog.setContentText("What country are you searching for");

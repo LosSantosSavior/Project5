@@ -21,15 +21,15 @@
          <font>
             <Font name="Agency FB Bold" size="21.0" />
          </font></Label>
-      <TextField layoutX="92.0" layoutY="84.0" prefHeight="25.0" prefWidth="76.0" />
-      <TextField layoutX="243.0" layoutY="84.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField layoutX="92.0" editable = "false" layoutY="84.0" prefHeight="25.0" prefWidth="76.0" />
+      <TextField layoutX="243.0" editable = "false" layoutY="84.0" prefHeight="25.0" prefWidth="120.0" />
       <Label layoutX="446.0" layoutY="81.0" text="\$">
          <font>
             <Font name="Agency FB Bold" size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="457.0" layoutY="83.0" prefHeight="25.0" prefWidth="149.0" />
-      <ChoiceBox layoutY="27.0">
+      <TextField layoutX="457.0" editable = "false" layoutY="83.0" prefHeight="25.0" prefWidth="149.0" />
+      <ChoiceBox layoutY="27.0" onAction="#yearChanged">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></ChoiceBox>
@@ -43,8 +43,8 @@
             <Font name="Agency FB Bold" size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="91.0" layoutY="163.0" prefHeight="25.0" prefWidth="76.0" />
-      <TextField layoutX="91.0" layoutY="236.0" prefHeight="25.0" prefWidth="76.0" />
+      <TextField layoutX="91.0" editable = "false" layoutY="163.0" prefHeight="25.0" prefWidth="76.0" />
+      <TextField layoutX="91.0" editable = "false" layoutY="236.0" prefHeight="25.0" prefWidth="76.0" />
       <Label layoutX="175.0" layoutY="163.0" prefHeight="17.0" prefWidth="62.0" text="Country:">
          <font>
             <Font name="Agency FB Bold" size="21.0" />
@@ -55,8 +55,8 @@
             <Font name="Agency FB Bold" size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="243.0" layoutY="163.0" prefHeight="25.0" prefWidth="120.0" />
-      <TextField layoutX="243.0" layoutY="236.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField layoutX="243.0" editable = "false" layoutY="163.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField layoutX="243.0" editable = "false" layoutY="236.0" prefHeight="25.0" prefWidth="120.0" />
       <Label layoutX="369.0" layoutY="163.0" prefHeight="17.0" prefWidth="77.0" text="GDP Value:">
          <font>
             <Font name="Agency FB Bold" size="21.0" />
@@ -77,8 +77,8 @@
             <Font name="Agency FB Bold" size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="457.0" layoutY="163.0" prefHeight="25.0" prefWidth="149.0" />
-      <TextField layoutX="457.0" layoutY="236.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField layoutX="457.0" editable = "false" layoutY="163.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField layoutX="457.0" editable = "false" layoutY="236.0" prefHeight="25.0" prefWidth="149.0" />
       <Label layoutX="9.0" layoutY="3.0" text="Year:">
          <font>
             <Font name="Agency FB Bold" size="18.0" />

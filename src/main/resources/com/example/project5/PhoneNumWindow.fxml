@@ -15,12 +15,12 @@
                         <HBox prefHeight="141.0" prefWidth="398.0">
                            <children>
                               <Label prefHeight="142.0" prefWidth="90.0" text="Country:" />
-                              <TextField fx:id="NameField" prefHeight="157.0" prefWidth="197.0" />
+                              <TextField fx:id="NameField" editable = "false" prefHeight="157.0" prefWidth="197.0" />
                            </children></HBox>
                         <HBox prefHeight="132.0" prefWidth="398.0">
                            <children>
                               <Label prefHeight="135.0" prefWidth="91.0" text="Country Code:" />
-                              <TextField fx:id="CountryCodeField" prefHeight="131.0" prefWidth="196.0" />
+                              <TextField fx:id="CountryCodeField" editable = "false" prefHeight="131.0" prefWidth="196.0" />
                               <AnchorPane prefHeight="132.0" prefWidth="110.0">
                                  <children>
                                     <Button layoutX="39.0" layoutY="53.0" mnemonicParsing="false" text="OK" />
@@ -31,7 +31,7 @@
                         <HBox prefHeight="122.0" prefWidth="398.0">
                            <children>
                               <Label prefHeight="125.0" prefWidth="92.0" text="Phone Prefix:" />
-                              <TextField fx:id="PhoneCodeField" prefHeight="127.0" prefWidth="196.0" />
+                              <TextField fx:id="PhoneCodeField" editable = "false" prefHeight="127.0" prefWidth="196.0" />
                            </children>
                         </HBox>
                      </children>
