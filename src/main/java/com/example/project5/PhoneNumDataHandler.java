@@ -43,7 +43,13 @@ public class PhoneNumDataHandler {
     }
 
     class PhoneNumDataType{
+        String country_data;
         ArrayList<String> country_name;
         ArrayList<String> country_code;
+        ArrayList<String> phone_prefix;
+    }
+    @Override
+    public String toString(){
+        return getData().country_data;
     }
 }
