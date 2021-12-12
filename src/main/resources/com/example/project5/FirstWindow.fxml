@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="292.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project5.FirstWindowController">
    <children>
-      <VBox layoutX="0" layoutY="0" prefHeight="400.0" prefWidth="292.0">
+      <VBox layoutX="0" layoutY="0" prefHeight="400.0" prefWidth="300.0">
          <children>
             <Button mnemonicParsing="false" onAction="#handleOpenChuckNorris" prefHeight="96.0" prefWidth="292.0" text="Open Chuck Norris API" />
             <Button mnemonicParsing="false" onAction="#handleOpenGDP" prefHeight="103.0" prefWidth="292.0" text="Open GDP API" />
