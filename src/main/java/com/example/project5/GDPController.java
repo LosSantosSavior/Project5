@@ -27,9 +27,7 @@ public class GDPController implements Initializable {
     private TextField GDPValDisp;
     @FXML
     private ChoiceBox yearChoice;
-
     private ArrayList<String> years;
-
 
 
 
@@ -38,6 +36,10 @@ public class GDPController implements Initializable {
         var endpoint1 = "http://api.worldbank.org/v2/countries/USA/indicators/NY.GDP.MKTP.CD?per_page=5000&format=json";
         var endpoint2 = "http://api.worldbank.org/v2/countries/CHN/indicators/NY.GDP.MKTP.CD?per_page=5000&format=json";
         var endpoint3 = "http://api.worldbank.org/v2/countries/IND/indicators/NY.GDP.MKTP.CD?per_page=5000&format=json";
+        var param1 = YearDisp.getText();
+        var param2 = CountryDisp.getText();
+        var param3 = GDPValDisp.getText();
+
     }
 
     public void loadList()  {
