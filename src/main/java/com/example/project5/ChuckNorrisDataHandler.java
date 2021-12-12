@@ -18,7 +18,7 @@ public class ChuckNorrisDataHandler {
         webLocation = siteToSearch;
     }
 
-    public ChuckNorrisDataType getData(){
+    public ChuckNorrisDataType getData(){//connects to the chuck norris api and gets its data
         var requestBuilder = HttpRequest.newBuilder();
         var ourURI = URI.create(webLocation);
         var dataRequest = requestBuilder.uri(ourURI).build();
@@ -40,7 +40,7 @@ public class ChuckNorrisDataHandler {
         return ChuckData;
     }
 
-    class ChuckNorrisDataType{
+    class ChuckNorrisDataType{//loads all the data
         ArrayList<String>categories;
         String created_at;
         String icon_url;
