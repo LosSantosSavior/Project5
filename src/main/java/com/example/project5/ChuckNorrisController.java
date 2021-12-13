@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 
 public class ChuckNorrisController implements Initializable {
     @FXML
-    private ListView<String> CatList;//turn into arraylist
+    private ListView<String> CatList;
     @FXML
     private TextField JokeDisplay;
     @FXML
@@ -31,16 +31,16 @@ public class ChuckNorrisController implements Initializable {
     private ObservableList<String>OList;
     private ChuckNorrisDataHandler.ChuckNorrisDataType Norris;
 
-    public void loadData(){
+    public void loadData(){//Sets up the joke to be searched
         var site = "https://api.chucknorris.io/jokes/random?category=";
         var param = CatDisplay.getText();
         var wholeSite = site+param;
         Model = new ChuckNorrisDataHandler(wholeSite);
-         Norris = Model.getData();
+        Norris = Model.getData();
 
 
     }
-    public void LoadList(){
+    public void LoadList(){//loads all of the joke categories from a text file
         Categories = new ArrayList<String>();
         var filename = "ChuckNorrisCategory";
         var filePath = Paths.get(filename);
@@ -56,14 +56,14 @@ public class ChuckNorrisController implements Initializable {
         OList= FXCollections.observableArrayList(Categories);
         CatList.setItems(OList);
     }
-    public void NewJokePushed(){
+    public void NewJokePushed(){//loads the joke when the new joke button is pushed
         loadData();
         JokeDisplay.setText(Norris.value);
         URLDisplay.setText(Norris.url);
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {//sets up the observable list to be loaded into a text feild
         LoadList();
         CatList.getSelectionModel().selectedItemProperty().addListener
                 (new ChangeListener<String>() {

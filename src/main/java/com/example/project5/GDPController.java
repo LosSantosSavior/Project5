@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
 import java.net.URL;
@@ -49,19 +50,6 @@ public class GDPController implements Initializable {
         GDPModel = new GDPDataHandler(wholeSite);
         GDP = GDPModel.getData();
     }
-
-//    private String getQueryParam(){
-//        var inputDialog = new TextInputDialog("1960");
-//        inputDialog.setContentText("What year do you want to view?");
-//        inputDialog.setHeaderText("Gathering information...");
-//        var response = inputDialog.showAndWait();
-//        if (response.isEmpty()){
-//            return "";
-//        }
-//        else{
-//            return response.get();
-//        }
-//    }
 
     public void loadList()  {
         GDPData = new ArrayList<String>();
