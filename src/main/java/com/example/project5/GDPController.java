@@ -79,7 +79,7 @@ public class GDPController implements Initializable {
     @FXML
     public void yearChanged(ActionEvent event)   { //User is able to change year after input from dropdown menu
         loadData();
-        YearField.setText(String.valueOf(yearChoice));
+        yearChoice.getSelectionModel().getSelectedItem().toString();
     }
 
     @Override
