@@ -7,6 +7,7 @@ Nicholas Russell
         displaying years available to user
  */
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.collections.ObservableList;
 import javafx.beans.value.ChangeListener;
@@ -45,7 +46,7 @@ public class GDPController implements Initializable {
 
 
 
-    public void loadData()  {
+    public void loadData()  { //Loads API json data
         var endpoint1 = "http://api.worldbank.org/v2/countries/USA/indicators/NY.GDP.MKTP.CD?per_page=5000&format=json";
         var endpoint2 = "http://api.worldbank.org/v2/countries/CHN/indicators/NY.GDP.MKTP.CD?per_page=5000&format=json";
         var endpoint3 = "http://api.worldbank.org/v2/countries/IND/indicators/NY.GDP.MKTP.CD?per_page=5000&format=json";
@@ -58,7 +59,7 @@ public class GDPController implements Initializable {
         GDP = GDPModel.getData();
     }
 
-    public void loadList()  {
+    public void loadList()  { //Loads info from GDPDataType
         GDPData = new ArrayList<String>();
         var filename = "GDPDataType";
         var filePath = Paths.get(filename);
@@ -75,11 +76,10 @@ public class GDPController implements Initializable {
         yearChoice.setItems(GDPList);
     }
 
-    public void yearChanged()   { //User is able to change year after input from dropdown menu
+    @FXML
+    public void yearChanged(ActionEvent event)   { //User is able to change year after input from dropdown menu
         loadData();
         YearField.setText(String.valueOf(yearChoice));
-        CountryField.setText(String.valueOf(yearChoice));
-        GDPField.setText(String.valueOf(yearChoice));
     }
 
     @Override

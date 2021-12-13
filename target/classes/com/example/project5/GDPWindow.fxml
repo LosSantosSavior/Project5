@@ -80,7 +80,7 @@
             <Font name="Droid Sans" size="35.0" />
          </font>
       </Label>
-      <ComboBox  prefHeight="25.0" prefWidth="68.0" promptText="Year" visibleRowCount="51">
+      <ComboBox prefHeight="25.0" prefWidth="68.0" promptText="Year" visibleRowCount="51">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></ComboBox>
