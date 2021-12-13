@@ -1,5 +1,12 @@
 package com.example.project5;
 
+/*
+Nicholas Russell
+    - GDP Window loads properly
+    - Year dropdown window not functional, having issues properly
+        displaying years available to user
+ */
+
 import javafx.fxml.FXML;
 import javafx.collections.ObservableList;
 import javafx.beans.value.ChangeListener;
